@@ -1,7 +1,7 @@
 {
   "name": "fakebook",
   "version": "1.0.0",
-  "description": "",
+  "description": "![fakebook-diagram](https://user-images.githubusercontent.com/105603919/187442773-5d6676e7-55a1-458b-b54a-56a8cc23ed9d.jpg)",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./server",
