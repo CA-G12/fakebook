@@ -7,7 +7,7 @@ const secretKey = process.env.SECRET;
 const { signUpQuery } = require('../../database/queries');
 const signUpSchema = require('../../validation/sign-up-validate');
 
-const signUp = (req, res) => {
+const signUp = (req, res, next) => {
   const {
     name, email, password,
   } = req.body;
@@ -18,7 +18,10 @@ const signUp = (req, res) => {
     bcrypt.hash(password, 10)
       .then((hashed) => signUpQuery([name, email, hashed]))
       .then((data) => {
-        jwt.sign({ id: data.rows[0].id }, secretKey, { expiresIn: '1h' }, (err, token) => {
+        const { id, img } = data.rows[0];
+
+        jwt.sign({ id, name, email, img }, secretKey, { expiresIn: '1h' }, (err, token) => {
+          if (err) next(err);
           res.cookie('token', token, { httpOnly: true })
             .status(200)
             .send({ message: 'welcome', data: data.rows[0], state: 'success' });
