@@ -17,17 +17,4 @@ CREATE TABLE posts(
     FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
-  INSERT INTO users (name, email, password) values 
-('Mohammad', 'Mohammad2000@gmail.com', 'MohammadPassword' ),
- ('Alan' ,  'Alan2000@gmail.com', 'AlanPassword'),
- ('Ahmed',  'Ahmed2000@gmail.com', 'AhmedPassword'),
- ('Majd',  'Majd2000@gmail.com', 'MajdPassword');
-
-   INSERT INTO posts (post, likes, user_id) values 
-('MohammadHi', 10, 1 ),
- ('AhmedHi',  30, 3),
- ('AlanHi' ,  20, 2),
- ('MajdHi',  40, 4);
-
-
 COMMIT;
