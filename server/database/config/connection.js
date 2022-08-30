@@ -5,7 +5,7 @@ const {
   NODE_ENV, DB_URL, TEST_DB, DATABASE_URL,
 } = process.env;
 
-const dbUrl = '';
+let dbUrl = '';
 
 if (NODE_ENV === 'development') dbUrl = DB_URL;
 else if (NODE_ENV === 'production') dbUrl = DATABASE_URL;
