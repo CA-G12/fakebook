@@ -3,8 +3,6 @@ const { signIn, signOut, signUp } = require('../controllers');
 
 const router = Router();
 
-router.get('/test3', (req, res) => {
-  res.send('hello3');
-});
+router.post('/sign-up', signUp);
 
 module.exports = router;
