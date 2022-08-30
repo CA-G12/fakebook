@@ -1,3 +1,5 @@
+const { feedQuery } = require('../../database/queries');
+
 const feed = () => {
 };
 
