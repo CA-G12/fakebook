@@ -6,7 +6,7 @@ CREATE TABLE users(
     name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(100) NOT NULL,
-    img VARCHAR(500) DEFAULT "https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg"
+    img VARCHAR(500) DEFAULT 'https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg'
 );
 
 CREATE TABLE posts(
