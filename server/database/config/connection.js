@@ -14,7 +14,7 @@ else throw Error('No DB URL');
 
 const connection = new Pool({
   connectionString: dbUrl,
-  ssl: false,
+  ssl: NODE_ENV !== 'production' ? false : { rejectUnauthorized: false },
 });
 
 module.exports = connection;
