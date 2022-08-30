@@ -21,7 +21,7 @@ const signIn = (req, res, next) => {
         } = data.rows[0];
 
         bcrypt.compare(password, hashedpassword, (err, result) => {
-          if (err) next();
+          if (err) next(err);
           if (!result) res.status(200).json({ message: 'invalid Input' });
           else {
             const token = jwt.sign({
