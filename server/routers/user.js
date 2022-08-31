@@ -3,9 +3,8 @@ const { feed, profile } = require('../controllers');
 const auth = require('../middlewares/auth');
 
 const router = Router();
-router.get('/user/feed', auth, feed);
 
-router.get('/user/profile', profile);
-router.get('/user/feed', feed);
+router.get('/user/profile', auth, profile);
+router.get('/user/feed', auth, feed);
 
 module.exports = router;
