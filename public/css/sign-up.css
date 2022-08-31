@@ -17,3 +17,25 @@ html{
     --heavy-support: #CBCBCB;
     --white: #fff;
   }
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 30%;
+}
+
+form > * {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+
+form p{
+    font-size: 2rem;
+}

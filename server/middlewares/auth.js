@@ -1,5 +1,6 @@
-const express = require('express');
 const jwt = require('jsonwebtoken');
+
+const { SECRET } = process.env;
 
 const userAuthenticator = (req, res, next) => {
   const { token } = req.cookies;
@@ -7,7 +8,13 @@ const userAuthenticator = (req, res, next) => {
   if (!token) {
     res.status(401).redirect('/');
   } else {
-    next();
+    jwt.verify(token, SECRET, (err, encoded) => {
+      if (err) {
+        res.status(401).redirect('/');
+      } else {
+        next();
+      }
+    });
   }
 };
 
