@@ -16,6 +16,22 @@ app.set('port', process.env.PORT || 5000);
 app.use(express.static(join(__dirname, '..', 'public')));
 app.use(router);
 
+router.use('/sign-in', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'html', 'sign-in.html'));
+});
+
+router.use('/sign-up', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'html', 'sign-up.html'));
+});
+
+router.use('/feed', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'html', 'feed.html'));
+});
+
+router.use('/profile', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'html', 'profile.html'));
+});
+
 app.use((req, res, next) => {
   res.sendFile(join(__dirname, '..', 'public', 'html', '404.html'));
 });
