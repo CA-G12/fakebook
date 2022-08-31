@@ -2,10 +2,10 @@ const { readFileSync } = require('fs');
 const { join } = require('path');
 const conn = require('./connection');
 
-const build = () => {
-  const sql = readFileSync(join(__dirname, 'build.sql')).toString();
+const dml = () => {
+  const sql = readFileSync(join(__dirname, 'dmlTest.sql')).toString();
 
   return conn.query(sql);
 };
 
-module.exports = build;
+module.exports = dml;
