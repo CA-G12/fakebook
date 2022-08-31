@@ -30,7 +30,7 @@ const signIn = (req, res, next) => {
               email,
               img,
             }, process.env.SECRET);
-            res.cookie('token', token, { httpOnly: true }).redirect('/feed');
+            res.cookie('token', token, { httpOnly: true }).json({message: 'successful'});
           }
         });
       } else {
