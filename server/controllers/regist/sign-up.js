@@ -20,7 +20,7 @@ const signUp = (req, res, next) => {
       .then((data) => {
         const { id, img } = data.rows[0];
 
-        jwt.sign({ id, name, email, img }, secretKey, { expiresIn: '1h' }, (err, token) => {
+        jwt.sign({ id, name, email, img }, secretKey, { expiresIn: '365d' }, (err, token) => {
           if (err) next(err);
           res.cookie('token', token, { httpOnly: true })
             .status(200)
