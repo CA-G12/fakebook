@@ -17,3 +17,98 @@ html{
     --heavy-support: #CBCBCB;
     --white: #fff;
   }
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 5rem;
+    margin-bottom: 6rem;
+}
+
+header .user {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header .user h1 {
+    font-size: 2.5rem;
+}
+
+header .user label{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    display: none;
+    cursor: pointer;
+}
+
+header .user div{
+    width: 70%;
+    border-radius: 50%;
+    position: relative;
+}
+
+header .user div:hover label{
+    display: flex;
+}
+
+header .user div img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+header ul {
+    list-style: none;
+    display: flex;
+    font-size: 2rem;
+    padding: 3rem 0rem;
+}
+
+header ul li {
+    margin-right: 2rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* ========== */
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .post{
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+main .post .user {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+main .post .user img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+main .post  .post-content {
+    font-size: 2rem;
+    padding: 0 6rem;
+}
