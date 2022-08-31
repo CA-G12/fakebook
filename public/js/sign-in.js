@@ -4,7 +4,6 @@ const password = document.querySelector('.password');
 const form = document.querySelector('.form');
 button.addEventListener('click', (e) => {
   e.preventDefault();
-    console.log(form.value);
   fetch('/user/sign-in', {
     method: 'POST',
     headers: {
@@ -16,8 +15,5 @@ button.addEventListener('click', (e) => {
     .then((data) => {
       if (data.message === 'successful') window.location.href = '/feed';
       else alert(data.message);
-    });
+    }).catch(console.error)
 });
-
-
-
