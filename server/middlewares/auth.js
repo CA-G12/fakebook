@@ -6,11 +6,11 @@ const userAuthenticator = (req, res, next) => {
   const { token } = req.cookies;
 
   if (!token) {
-    res.status(401).redirect('/');
+    res.status(401).send({ message: 'Unauthenticated' });
   } else {
     jwt.verify(token, SECRET, (err, encoded) => {
       if (err) {
-        res.status(401).redirect('/');
+        res.status(401).send({ message: 'Unauthenticated' });
       } else {
         next();
       }
