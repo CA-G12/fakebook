@@ -28,19 +28,24 @@ signUpBtn.addEventListener('click', (e) => {
 
   const data = { name, email, password, repeat_password };
 
-  const result = validation(email, password, repeat_password);
-  if (result !== true) {
+  if (!name || !email || !password || !repeat_password ) {
     msg.style.display = 'block';
-    msg.textContent = result;
+    msg.textContent = 'Please fill in all fields';
   } else {
-    fetchSignUp(data)
-      .then((res) => res.json())
-      .then((responseData) => {
-        if (responseData.state === 'success') window.location.href = '/feed';
-        else {
-          msg.style.display = 'block';
-          msg.textContent = responseData.message;
-        }
-      });
+    const result = validation(email, password, repeat_password);
+    if (result !== true) {
+      msg.style.display = 'block';
+      msg.textContent = result;
+    } else {
+      fetchSignUp(data)
+        .then((res) => res.json())
+        .then((responseData) => {
+          if (responseData.state === 'success') window.location.href = '/feed';
+          else {
+            msg.style.display = 'block';
+            msg.textContent = responseData.message;
+          }
+        });
+    }
   }
 });
