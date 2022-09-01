@@ -2,16 +2,19 @@
 ## ER-diagram
 ![fakebook-diagram](https://user-images.githubusercontent.com/105603919/187442773-5d6676e7-55a1-458b-b54a-56a8cc23ed9d.jpg)
 
-# fakebook
-
-**_fakebook_**:  
-
-
-
 ## 📍 Live Link:
 
 You can check the live version out from [HERE](https://fakkebook.herokuapp.com/).
 
+## Description
+This is a poor facebook clone, where the user can do all the things you do on facebook, but worse.
+
+## User Stories:
+- The user can sign up.
+- they can sign in.
+- they can view others' posts
+- they can add posts
+- they can delete posts
 
 ## 📍 Technologies that we used:
 
