@@ -11,41 +11,58 @@
 <body>
     <header>
         <div class="user">
-          <div>
-            <label class="upload" for="img">
-              <input name='Image' type="file" id="img" style="display: none;"/>
-              <i class="fa-solid fa-camera"></i>          
-            </label>
-
             <img src="https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg" alt="">
-          </div>
             <h1>Sara Dahman</h1>
         </div>
+
         <ul>
-            <li>Feed</li>
-            <li>Log Out</li>
+            <li><a href="/feed"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+            <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i></li>
         </ul>
     </header>
     <main>
-        <section class="post">
+        <section>
+        <div id="form">
+            <textarea placeholder="ENTER YOUR POST" rows="4" cols="50"></textarea>
+           <button type="submit">post</button>
+        </div>
+        </section>
 
-            <div class="user">
-                <img src="https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg" alt="">
-                <div>
-                    <h2>Sara Dahman</h2>
-                    <p>March 9, 2022</p>
+        <section class="posts">
+
+            <div class="post">
+                <div class="user">
+                  <img src="https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg" alt="">
+                  <h3>Sara Dahman</h3>
+                </div>
+
+                <i class="fa-solid fa-xmark"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus explicabo harum et vero. Molestias numquam modi eos vero neque harum, veritatis dignissimos maiores, in asperiores quae porro eum voluptate quas!
+                Adipisci voluptates, impedit nam quidem doloribus deserunt corrupti eius. Molestiae alias ipsam at distinctio dignissimos necessitatibus? In ex, dolores perspiciatis nemo reiciendis saepe deleniti voluptates debitis, illo molestiae doloribus error.
+                </p>
+
+                <div class="like">
+                    <span>5</span>
+                    <i class="fa-solid fa-thumbs-up"></i>
                 </div>
             </div>
 
-            <p class="post-content">
-               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita atque assumenda odit error quasi. Saepe fuga nobis vero quibusdam ex quisquam atque, eligendi laboriosam mollitia, totam aliquam voluptatum quod deserunt.
-               Recusandae cupiditate unde, commodi, rem ratione possimus reprehenderit sunt delectus qui laudantium atque repellendus deserunt vero explicabo labore libero sequi quas nesciunt dolorum distinctio nostrum corporis. Voluptatum beatae quibusdam quae.
-               Corporis repellendus rem consectetur dicta veniam officia aut, accusantium aperiam provident commodi numquam odio nobis. Quod necessitatibus eaque accusantium quidem, praesentium dignissimos ea provident similique repellendus, cumque omnis repellat minima!
-            </p>
+            <div class="post">
+                <div class="user">
+                  <img src="https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg" alt="">
+                  <h3>Sara Dahman</h3>
+                </div>
 
-            <div>
-                <span>5</span>
-                <i class="fa-solid fa-thumbs-up"></i>
+                <i class="fa-solid fa-xmark"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus explicabo harum et vero. Molestias numquam modi eos vero neque harum, veritatis dignissimos maiores, in asperiores quae porro eum voluptate quas!
+                Adipisci voluptates, impedit nam quidem doloribus deserunt corrupti eius. Molestiae alias ipsam at distinctio dignissimos necessitatibus? In ex, dolores perspiciatis nemo reiciendis saepe deleniti voluptates debitis, illo molestiae doloribus error.
+                </p>
+
+                <div class="like">
+                    <span>5</span>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                </div>
             </div>
 
         </section>
